@@ -21,3 +21,5 @@ public = [n for n in dir(math) if not n.startswith("__")]
 print("Публичных имен в math:", len(public))
 print("Первые 8:", public[:8])
 print("Мой __name__:", __name__)
+import os
+print("Мой __file__ =", os.path.basename(__file__) if '__file__' in globals() else "Интерактивный режим")
